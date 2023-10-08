@@ -21,7 +21,7 @@ public class SampleController {
         return ResponseEntity.badRequest().body(Collections.singletonMap("error", "Parameter is not present"));
     } else {
         Map<String, String> response = new HashMap<>();
-        response.put("echo", "Hello: " + message);
+        response.put("$.echo", "Hello: " + message);
         return ResponseEntity.ok(response);
     }
 }
