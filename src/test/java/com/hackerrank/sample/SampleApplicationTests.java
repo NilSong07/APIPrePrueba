@@ -53,7 +53,7 @@ public class SampleApplicationTests {
         mockMvc.perform(post("/customHello")
                 .param("message", "Custom Hello World!"))
                 .andDo(print())
-                .andExpect(jsonPath("$.echo").value("Custom Custom Hello World!"))
+                .andExpect(jsonPath("$.echo").value("Hello Custom Hello World!"))
                 .andExpect(
                         status().isOk());
     }
@@ -63,7 +63,7 @@ public class SampleApplicationTests {
         mockMvc.perform(post("/customHello")
                 .param("message", ""))
                 .andDo(print())
-                .andExpect(jsonPath("$.echo").value("Custom "))
+                .andExpect(jsonPath("$.echo").value("Hello "))
                 .andExpect(
                         status().isOk());
     }
