@@ -66,7 +66,5 @@ public class SampleController
         }
         else
             return ResponseEntity.status(HttpStatus.OK).body(Collections.singletonMap("echo", "Hello " + message));
-
     }
-
 }
